@@ -2,26 +2,26 @@ import { React, useState } from "react";
 import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { Box, IconButton, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { tokens } from "../../theme";
-import { HomeOutlinedIcon } from "@mui/icons-material/HomeOutlined";
-import { PeopleOutlinedIcon } from "@mui/icons-material/PeopleOutlined";
-import { ContactPageOutlinedIcon } from "@mui/icons-material/ContactPageOutlined";
-import { ReceiptOutlinedIcon } from "@mui/icons-material/ReceiptOutlined";
-import { PersonOutlinedIcon } from "@mui/icons-material/PersonOutlined";
-import { CalendarTodayOutlinedIcon } from "@mui/icons-material/CalendarTodayOutlined";
-import { HelpOutlinedIcon } from "@mui/icons-material/HelpOutlined";
-import { BarChartOutlinedIcon } from "@mui/icons-material/BarChartOutlined";
-import { PieChartOutelineOutlinedIcon } from "@mui/icons-material/PieChartOutlineOutlined";
-import { TimeLineOutlinedIcon } from "@mui/icons-material/TimeLineOutlined";
-import { MenuOutlinedIcon } from "@mui/icons-material/MenuOutlined";
-import { MapOutlinedIcon } from "@mui/icons-material/MapOutlined";
+// import  HomeOutlinedIcon  from "@mui/icons-material/HomeOutlined";
+// import  PeopleOutlinedIcon  from "@mui/icons-material/PeopleOutlined";
+// import  ContactPageOutlinedIcon  from "@mui/icons-material/ContactPageOutlined";
+// import  ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
+// import PersonOutlinedIcon  from "@mui/icons-material/PersonOutlined";
+// import  CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
+// import  HelpOutlinedIcon  from "@mui/icons-material/HelpOutlined";
+// import  BarChartOutlinedIcon  from "@mui/icons-material/BarChartOutlined";
+// import  PieChartOutelineOutlinedIcon  from "@mui/icons-material/PieChartOutlineOutlined";
+// import  TimeLineOutlinedIcon  from "@mui/icons-material/TimeLineOutlined";
+import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+// import  MapOutlinedIcon  from "@mui/icons-material/MapOutlined";
 
 export default function SidebarPro() {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
     const [isCollapsed, setIsCollapsed] = useState(false);
-    const [selected, setSelected] = useState("Dashboard");
+    // const [selected, setSelected] = useState("Dashboard");
 
     return (
         <Box
