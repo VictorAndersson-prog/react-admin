@@ -1,21 +1,22 @@
 import { React, useState } from "react";
-import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
+import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { Box, IconButton, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-// import { Link } from "react-router-dom";
+import "react-pro-sidebar/dist/css/styles.css";
+import { Link } from "react-router-dom";
 import { tokens } from "../../theme";
-// import  HomeOutlinedIcon  from "@mui/icons-material/HomeOutlined";
-// import  PeopleOutlinedIcon  from "@mui/icons-material/PeopleOutlined";
-// import  ContactPageOutlinedIcon  from "@mui/icons-material/ContactPageOutlined";
-// import  ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
-// import PersonOutlinedIcon  from "@mui/icons-material/PersonOutlined";
-// import  CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
-// import  HelpOutlinedIcon  from "@mui/icons-material/HelpOutlined";
-// import  BarChartOutlinedIcon  from "@mui/icons-material/BarChartOutlined";
-// import  PieChartOutelineOutlinedIcon  from "@mui/icons-material/PieChartOutlineOutlined";
-// import  TimeLineOutlinedIcon  from "@mui/icons-material/TimeLineOutlined";
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
+import ContactPageOutlinedIcon from "@mui/icons-material/ContactPageOutlined";
+import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
+import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
+import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
+import HelpOutlinedIcon from "@mui/icons-material/HelpOutlined";
+import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
+import PieChartOutelineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutlined";
+import TimeLineOutlinedIcon from "@mui/icons-material/TimeLineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
-// import  MapOutlinedIcon  from "@mui/icons-material/MapOutlined";
+import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 
 export default function SidebarPro() {
     const theme = useTheme();
@@ -43,7 +44,7 @@ export default function SidebarPro() {
                 },
             }}
         >
-            <Sidebar collapsed={isCollapsed}>
+            <ProSidebar collapsed={isCollapsed}>
                 <Menu iconShape="square">
                     <MenuItem
                         onClick={() => setIsCollapsed(!isCollapsed)}
@@ -74,8 +75,47 @@ export default function SidebarPro() {
                             </Box>
                         )}
                     </MenuItem>
+                    {!isCollapsed && (
+                        <Box mb="25px">
+                            <Box
+                                display="flex"
+                                justifyContent="center"
+                                alignItems="center"
+                            >
+                                <img
+                                    alt="profile-user"
+                                    width="100px"
+                                    height="100px"
+                                    src={
+                                        "https://raw.githubusercontent.com/ed-roh/react-admin-dashboard/master/public/assets/user.png"
+                                    }
+                                    style={{
+                                        cursor: "pointer",
+                                        borderRadius: "50%",
+                                    }}
+                                />
+                            </Box>
+
+                            <Box textAlign="center">
+                                <Typography
+                                    variant="h2"
+                                    color={colors.grey[100]}
+                                    fontWeight="bold"
+                                    sx={{ m: "10px 0 0 0" }}
+                                >
+                                    Victor Andersson
+                                </Typography>
+                                <Typography
+                                    variant="h5"
+                                    color={colors.greenAccent[500]}
+                                >
+                                    VP Fancy Admin
+                                </Typography>
+                            </Box>
+                        </Box>
+                    )}
                 </Menu>
-            </Sidebar>
+            </ProSidebar>
         </Box>
     );
 }
